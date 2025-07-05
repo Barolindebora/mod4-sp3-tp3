@@ -1,12 +1,93 @@
-# React + Vite
+##Create context permite:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Manejar el carrito desde cualquier componente sin pasar props.
 
-Currently, two official plugins are available:
+Guardar y recuperar los datos del carrito aunque recargues la página.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Encapsular la lógica de negocio del carrito en un solo lugar.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+LOS PASOS:
+
+✅ 1. Crear el contexto
+Usás createContext() para crear un nuevo contexto.
+Ejemplo:
+
+jsx
+Copiar
+Editar
+import { createContext } from 'react';
+
+export const CartContext = createContext();
+✅ 2. Crear el Provider
+El Provider es el componente que va a envolver a tu app (o parte de ella) y va a proporcionar el estado o funciones a través del contexto.
+
+jsx
+Copiar
+Editar
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+
+  return (
+    <CartContext.Provider value={{ cart, setCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
+👉 Tenés que envolver tu <App /> o el componente principal con el CartProvider en main.jsx o App.jsx.
+
+✅ 3. Consumir el contexto
+Usás useContext(NombreDelContexto) en los componentes donde necesitás acceder al estado o funciones.
+
+jsx
+Copiar
+Editar
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+
+const MiComponente = () => {
+  const { cart, setCart } = useContext(CartContext);
+
+  return (
+    <div>
+      <p>Hay {cart.length} productos en el carrito.</p>
+    </div>
+  );
+};
+
+
+Inicio de proyecto con vite: npm create vite@latest
+
+TAILWIND CSS
+
+Instalación de tailwind css : npm install tailwindcss @tailwindcss/vite
+
+Configuracion en vite.config.js:
+
+Realizar el import tailwindcss from '@tailwindcss/vite'
+
+index.css: @import "tailwindcss"
+
+agregar tailwindcss() en el arreglo de plugins
+
+Eliminar App.css
+
+BOOSTRAP
+
+Instalacion de boostrap: npm install bootstrap-icons
+
+MOTION
+
+npm install framer-motion
+
+Uso de hooks - useState, useEffect
+
+STORAGE - Almacenamineto web
+
+Local Storage - Session Storage
+
+Se accede abriendo la herramienta de inspeccionar - aplicacion
+
+ver ExampleStorage
+
+seteamos desde app hacia el storage y obtenermos desde el storage para el componente hijo

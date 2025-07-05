@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Mixer",
+    "img": "mixer.jpeg",
+    "price":"ARS $83.000"
+  },
+  {
+    "id": 2,
+    "name": "Aire",
+    "img": "aire.jpeg",
+    "price":"ARS $45.000"
+  },
+  {
+    "id": 3,
+    "name": "Aspiradora",
+    "img": "aspiradora.jpeg",
+    "price":"ARS $60.000"
+  },
+  {
+    "id": 4,
+    "name": "Auriculares",
+    "img": "auriculares.jpeg",
+    "price":"ARS $20.000"
+  },
+  {
+    "id": 5,
+    "name": "Batidora",
+    "img": "batidora.jpeg",
+    "price":"ARS $30.000"
+  },
+  {
+    "id": 6,
+    "name": "Caloventor",
+    "img": "caloventor.jpeg",
+    "price":"ARS $25.000"
+  },
+  {
+    "id": 7,
+    "name": "Cocina",
+    "img": "cocina.jpeg",
+    "price":"ARS $70.000"
+  },
+  {
+    "id": 8,
+    "name": "Cortadora de Cesped",
+    "img": "cortadora.jpeg",
+    "price":"ARS $50.000"
+  },
+  {
+    "id": 9,
+    "name": "Estufa",
+    "img": "estufa.jpeg",
+    "price":"ARS $60.000"
+  },
+  {
+    "id": 10,
+    "name": "Freidora",
+    "img": "freidora.jpeg",
+    "price":"ARS $70.000"
+  },
+  {
+    "id": 11,
+    "name": "Samsung Galaxy",
+    "img": "galaxy.jpeg",
+    "price":"ARS $120.000"
+  },
+  {
+    "id": 12,
+    "name": "Heladera",
+    "img": "heladera.jpeg",
+    "price":"ARS $90000"
+  },
+  {
+    "id": 13,
+    "name": "Iphone",
+    "img": "iphone.jpeg",
+    "price":"ARS $200.000"
+  },
+  {
+    "id": 14,
+    "name": "Lavadora",
+    "img": "lavarropas.jpeg",
+    "price":"ARS $80.000"
+  },
+  {
+    "id": 15,
+    "name": "Licuadora",
+    "img": "licuadora.jpeg",
+    "price":"ARS $30.000"
+  },
+  {
+    "id": 16,
+    "name": "Microondas",
+    "img": "microondas.jpeg",
+    "price":"ARS $40.000"
+  },
+  {
+    "id": 17,
+    "name": "Parrilla",
+    "img": "parrilla.jpeg",
+    "price":"ARS $50.000"
+  },
+  {
+    "id": 18,
+    "name": "Tablet",
+    "img": "tablet.jpeg",
+    "price":"ARS $40.000"
+  },
+  {
+    "id": 19,
+    "name": "Televisor",
+    "img": "tv.jpeg",
+    "price":"ARS $60.000"
+  },
+  {
+    "id": 20,
+    "name": "PC Gamer",
+    "img": "pc.jpeg",
+    "price":"ARS $150.000"
+  },
+  {
+    "id": 21,
+    "name": "Play 5",
+    "img": "play.jpeg",
+    "price":"ARS $100.000"
+  },
+  {
+    "id": 22,
+    "name": "Notebook",
+    "img": "notebook.jpeg",
+    "price":"ARS $80.000"
+  },
+  {
+    "id": 23,
+    "name": "Lavavajillas",
+    "img": "lavavajillas.jpeg",
+    "price":"ARS $70.000"
+  },
+  {
+    "id": 24,
+    "name": "Samsung S25",
+    "img": "s25.jpeg",
+    "price":"ARS $90.000"
+  }
+]
