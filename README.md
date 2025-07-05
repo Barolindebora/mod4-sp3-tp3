@@ -10,21 +10,18 @@ Encapsular la lógica de negocio del carrito en un solo lugar.
 LOS PASOS:
 
 ✅ 1. Crear el contexto
+
 Usás createContext() para crear un nuevo contexto.
 Ejemplo:
 
-jsx
-Copiar
-Editar
 import { createContext } from 'react';
 
 export const CartContext = createContext();
+
 ✅ 2. Crear el Provider
+
 El Provider es el componente que va a envolver a tu app (o parte de ella) y va a proporcionar el estado o funciones a través del contexto.
 
-jsx
-Copiar
-Editar
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
@@ -34,14 +31,12 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
+
 👉 Tenés que envolver tu <App /> o el componente principal con el CartProvider en main.jsx o App.jsx.
 
 ✅ 3. Consumir el contexto
 Usás useContext(NombreDelContexto) en los componentes donde necesitás acceder al estado o funciones.
 
-jsx
-Copiar
-Editar
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
