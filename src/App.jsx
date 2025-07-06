@@ -1,14 +1,29 @@
+import ProductList from './components/ProductList'
+import Cart from './components/Cart'
+import ThemeButton from './components/ThemeButton'
 
-
-
-import React from 'react'
-
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    // bg y text adaptables al modo claro/oscuro
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
+      
+      {/* Botón para cambiar entre modo claro y oscuro */}
+      <ThemeButton />
+
+      {/* Título */}
+      <h1 className="text-center text-3xl font-bold mt-6">
+        Catálogo de Productos
+      </h1>
+
+      {/* Lista de productos */}
+      <ProductList />
+
+      {/* Carrito */}
+      <Cart />
+    </div>
+  );
 }
 
-export default App
+export default App;
 
 
