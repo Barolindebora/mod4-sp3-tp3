@@ -1,12 +1,17 @@
 import ProductList from './components/ProductList'
 import Cart from './components/Cart'
 import ThemeButton from './components/ThemeButton'
+import { useState } from 'react';
+import Header from './components/Header'
 
 function App() {
+  // State to manage la visivilidad del carrito
+  const [isCartOpen, setIsCartOpen] = useState(false)
   return (
     // bg y text adaptables al modo claro/oscuro
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
-      
+      <Header 
+    setIsCartOpen={setIsCartOpen}/>
       {/* Botón para cambiar entre modo claro y oscuro */}
       <ThemeButton />
 
@@ -19,7 +24,10 @@ function App() {
       <ProductList />
 
       {/* Carrito */}
-      <Cart />
+      <Cart 
+      isCartOpen={isCartOpen}
+      setIsCartOpen={setIsCartOpen}
+      />
     </div>
   );
 }
