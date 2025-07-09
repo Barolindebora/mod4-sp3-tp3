@@ -11,11 +11,11 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 dark:bg-gray-800">
       {products.map((product) => (
         <div
           key={product.id}
-          className="bg-white rounded shadow-md p-4 flex flex-col items-center justify-between"
+          className="bg-white rounded shadow-md p-4 flex flex-col items-center justify-between dark:bg-gray-800"
         >
           {/* Imagen del producto */}
           <img
