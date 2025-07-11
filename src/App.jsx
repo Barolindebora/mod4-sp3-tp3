@@ -9,7 +9,7 @@ function App() {
   const toggleDark = () => {document.getElementById("rootElement").classList.toggle("dark")}
   return (
     // bg y text adaptables al modo claro/oscuro
-    <div id="rootElement" className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
+    <div id="rootElement" className="min-h-screen bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
       <Header 
     setIsCartOpen={setIsCartOpen}/>
       {/* Título */}
@@ -18,7 +18,9 @@ function App() {
       </h1>
 
       {/* Lista de productos */}
-      <ProductList />
+      <ProductList 
+      setIsCartOpen={setIsCartOpen}
+      />
 
       {/* Carrito */}
       <Cart 

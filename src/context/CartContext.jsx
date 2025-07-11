@@ -17,7 +17,12 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   //----------------------------------------------LOGICA DEL CARRITO----------------------------------------------
+ // manejar el modal  
  
+ 
+ 
+
+
   // Función para agregar un producto al carrito
   const addToCart = (product) => {
     setCart((prev) => {
@@ -60,7 +65,7 @@ export const CartProvider = ({ children }) => {
 
   // Retornamos el proveedor del contexto, compartiendo funciones y valores con los componentes hijos
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, totalPrice }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, totalPrice, clearCart}}>
       {children}
     </CartContext.Provider>
   );
