@@ -2,6 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import productos from "../api/productos.json"; // Tu ruta personalizada
 
+
+
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const { addToCart } = useContext(CartContext); // Consumimos la función para agregar
@@ -42,3 +44,8 @@ const ProductList = () => {
 };
 
 export default ProductList;
+
+
+
+
+

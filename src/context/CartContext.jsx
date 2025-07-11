@@ -5,6 +5,7 @@ export const CartContext = createContext();
 
 // Componente proveedor del carrito, que envuelve la app
 export const CartProvider = ({ children }) => {
+
   // Estado inicial del carrito: si hay algo en localStorage, lo usamos; si no, empezamos con []
   const [cart, setCart] = useState(() => {
     return JSON.parse(localStorage.getItem("cart")) || [];
@@ -15,6 +16,8 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  //----------------------------------------------LOGICA DEL CARRITO----------------------------------------------
+ 
   // Función para agregar un producto al carrito
   const addToCart = (product) => {
     setCart((prev) => {
@@ -49,6 +52,11 @@ export const CartProvider = ({ children }) => {
 
   // Calculamos el precio total del carrito
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  //funcion para limpiar el carrito
+  const clearCart = () => {
+    setCart([]);
+  };
 
   // Retornamos el proveedor del contexto, compartiendo funciones y valores con los componentes hijos
   return (

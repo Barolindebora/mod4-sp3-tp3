@@ -4,6 +4,7 @@ import { CartContext } from "../context/CartContext";
 const Cart = ({ isCartOpen, setIsCartOpen }) => {
   const {
     cart,
+    clearCart,
     removeFromCart,
     updateQuantity,
     totalPrice,
